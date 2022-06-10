@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: leeukpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leeukpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: leeukpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: leeukpipelinesjavascriptdocker 
+          image: user05acr.azurecr.io/leeukpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
